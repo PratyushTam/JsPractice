@@ -8,3 +8,5 @@
    # Conversion of JSON to Object and viseVersa.
      - JSON.stringify();       // Converts Object format into JSON format.
      - JSON.parse();           // Coverts JSON format into Object format.
+     - JSON.stringify();       //with replacer
+     - JSON.parse();           //with reviver
