@@ -1,0 +1,10 @@
+
+#JSON
+     - JavaScript Object Notation.
+     - It is used to transfer data between server and client.
+     - It supports strings, numbers, booleans, null, arrays, and objects.
+     - It is supported by most programming languages.
+
+   # Conversion of JSON to Object and viseVersa.
+     - JSON.stringify();       // Converts Object format into JSON format.
+     - JSON.parse();           // Coverts JSON format into Object format.
