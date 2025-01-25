@@ -1,0 +1,76 @@
+
+# To change the browser theme and store it in local storage.
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <style>
+        :root {
+            --dark-mode-bg: #000000;
+            --light-mode-bg: #ffffff;
+            --dark-mode-button: #ffffff;
+            --light-mode-button: #000000;
+            --dark-mode-text: #ffffff;
+            --light-mode-text: #000000;
+        }
+        
+        body {
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 80px;
+            border: none;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for button */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleTheme">Switch Mode</button>
+
+    <script>
+        // Check the current mode saved in localStorage
+        var mode = localStorage.getItem('mode');
+
+        // Apply the correct background color, button color, and text color based on saved theme
+        if (mode === 'dark') {
+            document.body.style.backgroundColor = 'var(--dark-mode-bg)';
+            document.body.style.color = 'var(--dark-mode-text)'; // Change text color
+            document.getElementById('toggleTheme').style.backgroundColor = 'var(--dark-mode-button)';
+            document.getElementById('toggleTheme').style.color = 'var(--dark-mode-bg)'; // Button text color
+        } else {
+            document.body.style.backgroundColor = 'var(--light-mode-bg)';
+            document.body.style.color = 'var(--light-mode-text)'; // Change text color
+            document.getElementById('toggleTheme').style.backgroundColor = 'var(--light-mode-button)';
+            document.getElementById('toggleTheme').style.color = 'var(--light-mode-bg)'; // Button text color
+        }
+
+        // Toggle the theme when the button is clicked
+        document.getElementById('toggleTheme').addEventListener('click', function() {
+            if (mode === 'dark') {
+                localStorage.setItem('mode', 'light');
+                document.body.style.backgroundColor = 'var(--light-mode-bg)';
+                document.body.style.color = 'var(--light-mode-text)'; // Change text color
+                document.getElementById('toggleTheme').style.backgroundColor = 'var(--light-mode-button)';
+                document.getElementById('toggleTheme').style.color = 'var(--light-mode-bg)'; // Button text color
+                mode = 'light'; // Update the mode variable
+            } else {
+                localStorage.setItem('mode', 'dark');
+                document.body.style.backgroundColor = 'var(--dark-mode-bg)';
+                document.body.style.color = 'var(--dark-mode-text)'; // Change text color
+                document.getElementById('toggleTheme').style.backgroundColor = 'var(--dark-mode-button)';
+                document.getElementById('toggleTheme').style.color = 'var(--dark-mode-bg)'; // Button text color
+                mode = 'dark'; // Update the mode variable
+            }
+        });
+
+    </script>
+</body>
+</html>
