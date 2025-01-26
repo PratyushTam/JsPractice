@@ -1,0 +1,1 @@
+2) Create a function and add parameterscalled "name" to the "greet" function and display the message: `Helo ${name}!`. Call the function with different names.
