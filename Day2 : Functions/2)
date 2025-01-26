@@ -1,1 +1,28 @@
 2) Create a function and add parameterscalled "name" to the "greet" function and display the message: `Helo ${name}!`. Call the function with different names.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+
+    <script>
+        
+    /* 2) Create a function and add parameter called "name" to the "greet" function and display the message: `Helo ${name}!`. Call the function with different names. */ 
+      
+    function greeting(name){
+        console.log(`Hello ${name}!`);
+    }
+
+    greeting("John");
+    greeting('Mia');
+    greeting('Miki');
+    greeting(`Mikisha`);
+
+    </script>
+</body>
+</html>
